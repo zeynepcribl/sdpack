@@ -1,0 +1,62 @@
+inputs:
+  syslog-src-1:
+    disabled: false
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    host: 0.0.0.0
+    maxBufferSize: 1000
+    ipWhitelistRegex: /.*/
+    timestampTimezone: local
+    singleMsgUdpPackets: false
+    enableProxyHeader: false
+    keepFieldsList: []
+    octetCounting: false
+    inferFraming: true
+    strictlyInferOctetCounting: true
+    allowNonStandardAppName: false
+    maxActiveCxn: 1000
+    socketIdleTimeout: 0
+    socketEndingMaxWait: 30
+    socketMaxLifespan: 0
+    tls:
+      disabled: true
+    enableLoadBalancing: false
+    type: syslog
+    udpPort: 9998
+    tcpPort: 9998
+  syslog-src-2:
+    disabled: false
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    host: 0.0.0.0
+    maxBufferSize: 1000
+    ipWhitelistRegex: /.*/
+    timestampTimezone: local
+    singleMsgUdpPackets: false
+    enableProxyHeader: false
+    keepFieldsList: []
+    octetCounting: false
+    inferFraming: true
+    strictlyInferOctetCounting: true
+    allowNonStandardAppName: false
+    maxActiveCxn: 1000
+    socketIdleTimeout: 0
+    socketEndingMaxWait: 30
+    socketMaxLifespan: 0
+    tls:
+      disabled: true
+    enableLoadBalancing: false
+    type: syslog
+    udpPort: 9997
+    tcpPort: 9997
+  dgen-syslog:
+    disabled: false
+    sendToRoutes: true
+    pqEnabled: false
+    streamtags: []
+    samples:
+      - eventsPerSec: 100
+        sample: syslog
+    type: datagen

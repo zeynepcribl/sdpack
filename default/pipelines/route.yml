@@ -1,0 +1,50 @@
+id: default
+groups: {}
+comments: []
+routes:
+  - id: 1KpUpL
+    name: datagen-1
+    final: false
+    disabled: false
+    pipeline: passthru
+    description: ""
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __inputId=='datagen:AaronSyslogPack.dgen-syslog'
+    clones:
+      - {}
+    output: syslog-tcp-dest
+  - id: fLwHma
+    name: datagen-2
+    final: false
+    disabled: false
+    pipeline: passthru
+    description: ""
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __inputId=='datagen:AaronSyslogPack.dgen-syslog'
+    clones:
+      - {}
+    output: syslog-udp-dest-1
+  - id: 1FoG7U
+    name: datagen-3
+    final: true
+    disabled: false
+    pipeline: passthru
+    description: ""
+    enableOutputExpression: false
+    outputExpression: null
+    filter: __inputId=='datagen:AaronSyslogPack.dgen-syslog'
+    clones: []
+    output: syslog-udp-dest-2
+  - id: default
+    name: default
+    final: true
+    disabled: false
+    pipeline: main
+    description: ""
+    enableOutputExpression: false
+    outputExpression: null
+    filter: "true"
+    clones: []
+    output: default

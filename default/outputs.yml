@@ -1,0 +1,105 @@
+outputs:
+  syslog-tcp-dest:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    protocol: tcp
+    facility: 1
+    severity: 5
+    appName: Cribl
+    messageFormat: rfc3164
+    timestampFormat: syslog
+    throttleRatePerSec: "0"
+    logFailedRequests: false
+    loadBalanced: true
+    connectionTimeout: 10000
+    writeTimeout: 60000
+    tls:
+      disabled: true
+    onBackpressure: block
+    excludeSelf: false
+    hosts:
+      - tls: inherit
+        weight: 1
+        host: 127.0.0.1
+        port: 9998
+      - tls: inherit
+        weight: 1
+        host: 127.0.0.1
+        port: 9997
+    dnsResolvePeriodSec: 600
+    loadBalanceStatsPeriodSec: 300
+    maxConcurrentSenders: 0
+    type: syslog
+  syslog-udp-dest-1:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    protocol: udp
+    facility: 1
+    severity: 5
+    appName: Cribl
+    messageFormat: rfc3164
+    timestampFormat: syslog
+    throttleRatePerSec: "0"
+    logFailedRequests: false
+    maxRecordSize: 1500
+    udpDnsResolvePeriodSec: 0
+    loadBalanced: true
+    connectionTimeout: 10000
+    writeTimeout: 60000
+    tls:
+      disabled: true
+    onBackpressure: block
+    excludeSelf: false
+    hosts:
+      - tls: inherit
+        weight: 1
+        host: 127.0.0.1
+        port: 9998
+      - tls: inherit
+        weight: 1
+        host: 127.0.0.1
+        port: 9997
+    dnsResolvePeriodSec: 600
+    loadBalanceStatsPeriodSec: 300
+    maxConcurrentSenders: 0
+    type: syslog
+    host: 127.0.0.1
+    port: 9998
+  syslog-udp-dest-2:
+    systemFields:
+      - cribl_pipe
+    streamtags: []
+    protocol: udp
+    facility: 1
+    severity: 5
+    appName: Cribl
+    messageFormat: rfc3164
+    timestampFormat: syslog
+    throttleRatePerSec: "0"
+    logFailedRequests: false
+    maxRecordSize: 1500
+    udpDnsResolvePeriodSec: 0
+    loadBalanced: true
+    connectionTimeout: 10000
+    writeTimeout: 60000
+    tls:
+      disabled: true
+    onBackpressure: block
+    excludeSelf: false
+    hosts:
+      - tls: inherit
+        weight: 1
+        host: 127.0.0.1
+        port: 9998
+      - tls: inherit
+        weight: 1
+        host: 127.0.0.1
+        port: 9997
+    dnsResolvePeriodSec: 600
+    loadBalanceStatsPeriodSec: 300
+    maxConcurrentSenders: 0
+    type: syslog
+    host: 127.0.0.1
+    port: 9997
