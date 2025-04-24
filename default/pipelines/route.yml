@@ -7,7 +7,7 @@ routes:
     final: false
     disabled: false
     pipeline: passthru
-    description: ""
+    description: v0.0.1
     enableOutputExpression: false
     outputExpression: null
     filter: __inputId=='datagen:AaronSyslogPack.dgen-syslog'
@@ -19,7 +19,7 @@ routes:
     final: false
     disabled: false
     pipeline: passthru
-    description: ""
+    description: v0.0.1
     enableOutputExpression: false
     outputExpression: null
     filter: __inputId=='datagen:AaronSyslogPack.dgen-syslog'
@@ -31,7 +31,7 @@ routes:
     final: true
     disabled: false
     pipeline: passthru
-    description: ""
+    description: v0.0.1
     enableOutputExpression: false
     outputExpression: null
     filter: __inputId=='datagen:AaronSyslogPack.dgen-syslog'
@@ -42,7 +42,7 @@ routes:
     final: true
     disabled: false
     pipeline: main
-    description: ""
+    description: v0.0.1
     enableOutputExpression: false
     outputExpression: null
     filter: "true"
