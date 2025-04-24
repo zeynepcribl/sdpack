@@ -1,1 +1,1 @@
-{"version":"0.0.1","tags":{"streamtags":[]},"displayName":"AaronSyslogPack","name":"AaronSyslogPack","minLogStreamVersion":"4.11.0"}
+{"name":"AaronSyslogPack","version":"0.0.2","minLogStreamVersion":"4.11.0","displayName":"AaronSyslogPack","tags":{"streamtags":[]}}
